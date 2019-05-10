@@ -3,3 +3,5 @@ project(Algorithms)
 
 add_executable(hello hello.cpp)
 add_executable(goodbye goodbye.cpp)
+add_executable(draw_map draw_map.cpp Map.h Map.cpp)
+

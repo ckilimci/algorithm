@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.2.2)
+project(Algorithms)
+
+add_executable(hello hello.cpp)
+add_executable(goodbye goodbye.cpp)

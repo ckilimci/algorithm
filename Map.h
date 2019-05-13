@@ -12,4 +12,5 @@ class Map {
 	void set_size(int);
 	void print();
 	void draw();
+	void find_path(int, int, int, int);
 };

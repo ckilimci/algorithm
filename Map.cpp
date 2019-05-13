@@ -3,6 +3,7 @@
 #include <cmath>
 #include <cstdint>
 #include <limits.h>
+#include <list>
 #include "Map.h"
 
 Map::Map() : Map::Map(4) { }
@@ -41,15 +42,19 @@ void Map::draw() {
 }
 
 void Map::find_path(int startx, int starty, int endx, int endy) {
-	std::cout << "Start point=(" << startx << "," << starty << ")" << std::endl;
+	// std::cout << "Start point=(" << startx << "," << starty << ")" << std::endl;
 	int x = startx;
 	int y = starty;
 	int gx = 0;
 	int hx = 0;
+	std::list<int> pathx;
+	std::list<int> pathy;
 	Map costs(this->row, this->col);
 	Map visited(this->row, this->col);
 	while(x != endx || y != endy) {
-		std::cout << "We are now at (" << x << "," << y << ")"  << std::endl;
+		// std::cout << "We are now at (" << x << "," << y << ")"  << std::endl;
+		pathx.push_back(x);
+		pathy.push_back(y);
 		visited.zone[x][y] = 1;
 		gx = pow(startx-x, 2)+pow(starty-y, 2);
 		hx = pow(endx-x, 2)+pow(endy-y, 2);
@@ -176,5 +181,13 @@ void Map::find_path(int startx, int starty, int endx, int endy) {
 		//std::cout << "Minimum point is at (" << x << "," << y << ")"  << std::endl;
 		//costs.draw();
 	}
-	std::cout << "End point=(" << endx << "," << endy << ")" << std::endl;
+	// std::cout << "End point=(" << endx << "," << endy << ")" << std::endl;
+	std::list<int>::iterator ix = pathx.begin();
+	std::list<int>::iterator iy = pathy.begin();
+	while(ix != pathx.end()) {
+		std::cout << "(" << *ix << "," << *iy << ") ";
+		ix++;
+		iy++;
+	}
+	std::cout << std::endl;
 }

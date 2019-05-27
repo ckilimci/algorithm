@@ -24,5 +24,10 @@ int main() {
 		std::cout << i << " ==";
 		printList(graph.head[i]);
 	}
+
+	graph.dfs(5);
+	graph.dfs(3);
+	graph.dfs(1);
+
 	return 0;
 }

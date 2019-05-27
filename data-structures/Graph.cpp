@@ -34,6 +34,24 @@ Graph::Graph(Edge edges[], int n, int N) {
 
 }
 
+void Graph::dfs(int start) {
+	std::cout << "Starting from " << start << std::endl;
+	bool *visited = new bool[N];
+	Graph::dfs(start, visited);
+}
+
+void Graph::dfs(int now, bool visited[]) {
+	std::cout << "Visiting " << now << std::endl;
+	visited[now] = true;
+	Node* ptr = head[now];
+	while (ptr != nullptr) {
+		if (false == visited[ptr->data]) {
+			Graph::dfs(ptr->data, visited);
+		}
+		ptr = ptr->next;
+	}
+}
+
 Node* Graph::getAdjListNode(int dest, Node* head) {
 	Node* newNode = new Node;
 	newNode->data = dest;

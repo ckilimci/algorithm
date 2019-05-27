@@ -13,10 +13,10 @@ struct Edge {
 class Graph {
 	int N;
 	Node* getAdjListNode(int, Node*);
-	void dfs(int, bool[]);
 	public:
 	Node **head;
 	Graph(Edge[], int, int);
 	void dfs(int);
+	void dfs(int, bool[]);
 	~Graph();
 };

@@ -3,3 +3,4 @@ project(Algorithms)
 
 add_executable(hello-ds hello-ds.cpp)
 add_executable(dfs-graph  dfs-graph.cpp Graph.h Graph.cpp)
+add_executable(count-islands  count-islands.cpp Graph.h Graph.cpp)

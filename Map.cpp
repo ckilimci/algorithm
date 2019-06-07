@@ -6,18 +6,22 @@
 #include <list>
 #include "Map.h"
 
-Map::Map() : Map::Map(4) { }
+Map::Map() {
+	this->row = 4;
+	this->col = 4;
+	this->zone = std::vector<std::vector<int> >(4, std::vector<int>(4));
+}
 
 Map::Map(int s) {
 	this->row = s;
 	this->col = s;
-	this->zone = std::vector<std::vector<int>>(s, std::vector<int>(s));
+	this->zone = std::vector<std::vector<int> >(s, std::vector<int>(s));
 }
 
 Map::Map(int r, int c) {
 	this->row = r;
 	this->col = c;
-	this->zone = std::vector<std::vector<int>>(r, std::vector<int>(c));
+	this->zone = std::vector<std::vector<int> >(r, std::vector<int>(c));
 }
 
 void Map::set_size(int s) {

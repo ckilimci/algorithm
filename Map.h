@@ -5,7 +5,7 @@ class Map {
 	public:
 	int row;
 	int col;
-	std::vector<std::vector<int>> zone;
+	std::vector<std::vector<int> > zone;
 	Map();
 	Map(int);
 	Map(int, int);

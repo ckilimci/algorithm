@@ -14,3 +14,7 @@ add_executable(river_size river-size.cpp)
 
 set_property(TARGET river_size PROPERTY CXX_STANDARD 11)
 
+add_executable(subset_sum subset-sum.cpp)
+
+set_property(TARGET subset_sum PROPERTY CXX_STANDARD 11)
+

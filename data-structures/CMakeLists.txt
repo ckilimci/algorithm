@@ -10,4 +10,5 @@ add_executable(linked-list-sample linked-list-sample.cpp LinkedList.h LinkedList
 add_executable(bfs-binary-tree bfs-binary-tree.cpp)
 add_executable(pointer pointer.cpp)
 add_executable(smart_pointer smart-pointer.cpp)
+add_executable(custom_stack custom-stack.cpp)
 

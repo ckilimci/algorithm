@@ -18,3 +18,7 @@ add_executable(subset_sum subset-sum.cpp)
 
 set_property(TARGET subset_sum PROPERTY CXX_STANDARD 11)
 
+add_executable(largest_range largest-range.cpp)
+
+set_property(TARGET largest_range PROPERTY CXX_STANDARD 11)
+

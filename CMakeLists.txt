@@ -22,3 +22,7 @@ add_executable(largest_range largest-range.cpp)
 
 set_property(TARGET largest_range PROPERTY CXX_STANDARD 11)
 
+add_executable(quick quick.cpp)
+
+set_property(TARGET quick PROPERTY CXX_STANDARD 11)
+

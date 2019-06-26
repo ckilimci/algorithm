@@ -26,3 +26,8 @@ add_executable(quick quick.cpp)
 
 set_property(TARGET quick PROPERTY CXX_STANDARD 11)
 
+add_executable(kth_largest kth-largest.cpp)
+
+set_property(TARGET kth_largest PROPERTY CXX_STANDARD 11)
+
+

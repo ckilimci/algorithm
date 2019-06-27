@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include <climits>
 
 /*
 Implement a stack that has the following methods:

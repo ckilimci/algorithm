@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 
 template <class T>
 std::ostream& operator << (std::ostream& os, const std::vector<T>& v) {

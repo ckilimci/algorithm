@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MallardDuck.cpp"
+#include "Duck.h"
 
 int main() {
 	std::cout << "Hello" << std::endl;

@@ -4,6 +4,7 @@ project(Algorithms)
 
 add_subdirectory(data-structures)
 add_subdirectory(games)
+add_subdirectory(design-pattern)
 
 add_executable(hello hello.cpp)
 add_executable(goodbye goodbye.cpp)

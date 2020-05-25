@@ -13,3 +13,7 @@ void Duck::quack() {
 void Duck::swim() {
 	std::cout << this->name << " is swimming" << std::endl;
 }
+
+void Duck::display() {
+    std::cout << this->name << " is a duck" << std::endl;
+}

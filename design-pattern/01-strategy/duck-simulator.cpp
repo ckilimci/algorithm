@@ -8,6 +8,7 @@ int main() {
     RedHeadDuck d("cirkin");
     d.quack();
     d.swim();
+    d.fly();
     d.display();
 
 

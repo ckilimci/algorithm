@@ -3,5 +3,6 @@ project(Algorithms)
 
 
 add_subdirectory(01-strategy)
+add_subdirectory(10-state)
 
 

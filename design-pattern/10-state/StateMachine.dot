@@ -1,0 +1,8 @@
+digraph Machine
+{
+    rankdir=LR;
+    Closed -> Open     [ label = "PayOK" ]
+    Closed -> Closed   [ label = "PayFail / Enter" ]
+    Open   -> Open     [ label = "PayOK / PayFail"]
+    Open   -> Closed   [ label = "Enter"]
+}

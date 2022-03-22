@@ -28,6 +28,19 @@ class BinaryTree {
             }
         }
     }
+    bool isBST(TreeNode *node) {
+        if (node == nullptr) {
+            return true;
+        }
+        bool result = true;
+        if (node->left != nullptr) {
+            result = (node->left->data < node->data && isBST(node->left));
+        }
+        if (result && node->right != nullptr) {
+            result = (node->right->data > node->data && isBST(node->right));
+        }
+        return result;
+    }
     public:
     TreeNode * head;
     BinaryTree(int data) {
@@ -63,6 +76,9 @@ class BinaryTree {
         }
         cout << endl;
     }
+    bool isBST() {
+        return isBST(head);
+    }
 };
 
 int main(int argc, char const *argv[])
@@ -76,6 +92,15 @@ int main(int argc, char const *argv[])
     tree->insert(350);
     tree->insert(90);
 
+    // 50 becomes 80
+    tree->head->left->data = 80;
+
     tree->level_order_tracersal();
+
+    if (tree->isBST()) {
+        cout << "This is a BST" << endl;
+    } else {
+        cout << "This is NOT a BST" << endl;
+    }
     return 0;
 }
